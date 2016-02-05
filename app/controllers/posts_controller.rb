@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     if params[:author_id]
-      @posts = Author.find(params[:author_id]).posts
+      @posts = Post.where(author_id: params[:author_id])
     else
       @posts = Post.all
     end
@@ -10,9 +10,9 @@ class PostsController < ApplicationController
 
   def show
     if params[:author_id]
-      @post = Author.find(params[:author_id]).posts.find(params[:id])
+      @post = Post.post_by_author(params[:author_id], params[:id])
     else
-      @post = Post.find(params[:author_id])
+      @post = Post.find(params[:id])
     end
   end
 

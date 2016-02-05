@@ -17,6 +17,10 @@ class Post < ActiveRecord::Base
     where(author: author_id)
   end
 
+  def self.post_by_author(author_id, post_id)
+    where(author_id: author_id, id: post_id).first
+  end
+
   private
 
   def is_title_case
