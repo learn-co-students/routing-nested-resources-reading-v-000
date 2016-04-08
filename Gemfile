@@ -34,7 +34,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.4.2'
+  #was getting this error when $ rake db:migrate
+  #[DEPRECATION] `last_comment` is deprecated.  Please use `last_description` instead.
+  #this issue was resolved in a higher version of rpsec-rails.
   gem 'capybara'
   gem 'database_cleaner'
 end
