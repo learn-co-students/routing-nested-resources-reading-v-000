@@ -2195,3 +2195,23 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
   Rendered posts/index.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2016-09-01 07:11:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 205ms (Views: 193.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/authors/1/posts" for ::1 at 2016-09-01 07:11:24 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 35.0ms | ActiveRecord: 0.3ms)
