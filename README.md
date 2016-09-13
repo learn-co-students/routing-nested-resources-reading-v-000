@@ -136,18 +136,14 @@ Let's update `index` and `show` for the new routes:
   end
 
   def show
-    if params[:author_id]
-      @post = Post.find(params[:id])
-    else
-      @post = Post.find(params[:id])
-    end
+    @post = Post.find(params[:id])
   end
 
   def new
     # ...
 ```
 
-We didn't have to make any new methods, or make any calls to render templates explicitly, just add a simple check for `params[:author_id]` to each method and go from there.
+We didn't have to make any new methods, or make any calls to render templates explicitly, just add a simple check for `params[:author_id]` and go from there.
 
 Where is `params[:author_id]` coming from? Rails provides it for us through the nested route so we don't have to worry about a collision with the `:id` parameter that `show` is looking for. It takes the parent resource name and appends `_id` so that there's always a predictable way to find the parent resource id.
 
