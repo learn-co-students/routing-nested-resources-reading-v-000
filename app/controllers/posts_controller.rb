@@ -1,12 +1,29 @@
 class PostsController < ApplicationController
-
+# Where is params[:author_id] coming from?
+# Rails provides it for us through the
+# nested route so we don't have to worry
+# about a collision with the :id parameter
+# that show is looking for.
+#It takes the parent resource name and
+# appends _id so that there's always a
+#predictable way to find the parent
+#resource id.
   def index
-    @posts = Post.all
-  end
+      if params[:author_id]
+        @posts = Author.find(params[:author_id]).posts
+      else
+        @posts = Post.all
+      end
+    end
 
-  def show
-    @post = Post.find(params[:id])
-  end
+    def show
+      if params[:author_id]
+        @post = Post.find(params[:id])
+      else
+        @post = Post.find(params[:id])
+      end
+    end
+
 
   def new
     @post = Post.new
