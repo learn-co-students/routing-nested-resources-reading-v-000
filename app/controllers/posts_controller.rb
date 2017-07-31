@@ -1,7 +1,13 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if params[:author_id]
+     @posts = Author.find(params[:author_id]).posts
+   else
+     @posts = Post.all
+   end
+ end
+
   end
 
   def show
@@ -33,4 +39,3 @@ private
   def post_params
     params.require(:post).permit(:title, :desription, :post_status, :author_id)
   end
-end
