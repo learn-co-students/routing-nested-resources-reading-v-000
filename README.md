@@ -266,3 +266,5 @@ Nesting resources is a powerful tool that helps you keep your routes neat and ti
 However, as a general rule, you should only nest resources one level deep and ensure that you are considering Separation of Concerns in your routing.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/routing-nested-resources-reading'>Routing and Nested Resources</a> on Learn.co and start learning to code for free.</p>
+
+###
