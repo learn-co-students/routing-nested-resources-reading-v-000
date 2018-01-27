@@ -1,11 +1,20 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if params[:author_id]
+      @posts = Author.find(params[:author_id]).posts
+    else
+      @posts = Post.all
+    end
   end
 
   def show
-    @post = Post.find(params[:id])
+    if params[:author_id]
+      @post = Post.find(params[:id])
+      # @post = Author.find(params[:author_id]).posts.find(params[:id])
+    else
+      @post = Post.find(params[:id])
+    end
   end
 
   def new
@@ -28,9 +37,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-private
+  private
 
   def post_params
     params.require(:post).permit(:title, :desription, :post_status, :author_id)
   end
+  
 end
