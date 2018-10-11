@@ -2,6 +2,7 @@
 
 ## Objectives
 
+
 1. Understand the value of nested routes
 2. Create nested routes
 3. Understand how nested resource URL helpers are named
