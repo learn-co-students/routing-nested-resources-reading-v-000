@@ -28,6 +28,18 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def posts_index
+    if params[:author_id]
+      @posts = Author.find(params[:author_id]).posts
+    else
+      @posts = Post.all
+    end
+  end
+
+  def post
+    @post = Post.find(params[:id])
+  end
+
 private
 
   def post_params
