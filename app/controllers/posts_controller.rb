@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
 
-  def index
-    @posts = Post.all
+  def index #renders different sets of posts depending on path
+    if params[:author_id]
+      @posts = Author.find(params[:author_id]).posts
+    else
+      @posts = Post.all
+    end
   end
-
-  def show
+ 
+  def show #data concerning a single post 
     @post = Post.find(params[:id])
   end
 
