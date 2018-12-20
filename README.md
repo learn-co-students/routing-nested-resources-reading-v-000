@@ -8,6 +8,9 @@
 
 ## Lesson
 
+
+
+
 We're going to keep working on our blog application, augmenting it to filter posts by author in a more user-friendly and RESTful way.
 
 ### URL As Data
