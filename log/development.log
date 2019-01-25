@@ -2033,3 +2033,1056 @@ ActionController::RoutingError (No route matches [GET] "/authors/1/posts"):
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-01-25 13:12:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 748ms (Views: 724.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-01-25 13:12:16 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-01-25 13:12:17 -0600
+
+
+Started GET "/posts" for ::1 at 2019-01-25 13:12:19 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1/author/1" for ::1 at 2019-01-25 13:12:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/posts/1/author/1"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (84.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (192.1ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 13:12:44 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.9ms)
+
+
+Started GET "/authors/1" for ::1 at 2019-01-25 13:12:55 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 53ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/1/posts" for ::1 at 2019-01-25 13:13:00 -0600
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/1/posts/1" for ::1 at 2019-01-25 13:13:05 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:15:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (177.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 3]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2019-01-25 19:13:26.689219"], ["updated_at", "2019-01-25 19:13:26.689219"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2019-01-25 19:13:26.693430"], ["updated_at", "2019-01-25 19:13:26.693430"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2019-01-25 19:13:26.696502"], ["updated_at", "2019-01-25 19:13:26.696502"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 4], ["created_at", "2019-01-25 19:13:26.705333"], ["updated_at", "2019-01-25 19:13:26.705333"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 5], ["created_at", "2019-01-25 19:13:26.708373"], ["updated_at", "2019-01-25 19:13:26.708373"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 6], ["created_at", "2019-01-25 19:13:26.711409"], ["updated_at", "2019-01-25 19:13:26.711409"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2019-01-24 00:00:00.000000"], ["updated_at", "2019-01-25 19:13:26.714819"], ["id", 6]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/authors/1/posts" for ::1 at 2019-01-25 13:13:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
+  app/controllers/authors_controller.rb:8:in `posts_index'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (176.7ms)
+
+
+Started GET "/authors/1/posts" for ::1 at 2019-01-25 13:15:02 -0600
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
+  app/controllers/authors_controller.rb:8:in `posts_index'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.8ms)
+
+
+Started PUT "/__web_console/repl_sessions/0ebfc6a2b4c805857cb088fe010d7f12" for ::1 at 2019-01-25 13:15:42 -0600
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 13:15:52 -0600
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 252ms (Views: 231.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/4/posts/1" for ::1 at 2019-01-25 13:15:57 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
+  app/controllers/authors_controller.rb:14:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (174.3ms)
+
+
+Started PUT "/__web_console/repl_sessions/1cc09659f6f7a3b95e9482c90b780f0c" for ::1 at 2019-01-25 13:16:16 -0600
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:16:21 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:15:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.6ms)
+
+
+Started PUT "/__web_console/repl_sessions/d2f1745bbcfd193a61b2f354000e6187" for ::1 at 2019-01-25 13:16:25 -0600
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+
+
+Started GET "/authors/4/posts/4/" for ::1 at 2019-01-25 13:17:05 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:15:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.1ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:17:08 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:15:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (171.1ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:17:31 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0x00007f884501af20>
+Did you mean?  try):
+  app/controllers/authors_controller.rb:14:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.3ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:17:43 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0x00007f883f720708>
+Did you mean?  try):
+  app/controllers/authors_controller.rb:14:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (176.4ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:17:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 24643ms (ActiveRecord: 1.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:16:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (180.9ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:18:26 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 32001ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=):
+  app/controllers/authors_controller.rb:16:in `post'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (175.1ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 13:19:02 -0600
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"4", "post_id"=>"4"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7829ms (Views: 235.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 14:15:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"4", "id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 220ms (Views: 195.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-01-25 14:15:37 -0600
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:15:41 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:15:45 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (85.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (183.9ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:20:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (113.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (179.5ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:20:21 -0600
+
+SyntaxError (/Users/michaeldilley/Desktop/Coding/Rails/user-addresses-and-teams/rails-layouts-and-templates-lab-v-000/simple-partials-reading-v-000/simple-partials-lab-v-000/partial-locals-reading-v-000/partial-locals-lab-v-000/refactoring-views-with-helpers-reading-v-000/refactoring-views-with-helpers-lab-v-000/model-class-methods-reading-v-000/model-class-methods-lab-v-000/routing-nested-resources-reading-v-000/config/routes.rb:3: syntax error, unexpected tSYMBEG, expecting '('
+...urces :authors, only: [:show. :index] do
+...                              ^
+/Users/michaeldilley/Desktop/Coding/Rails/user-addresses-and-teams/rails-layouts-and-templates-lab-v-000/simple-partials-reading-v-000/simple-partials-lab-v-000/partial-locals-reading-v-000/partial-locals-lab-v-000/refactoring-views-with-helpers-reading-v-000/refactoring-views-with-helpers-lab-v-000/model-class-methods-reading-v-000/model-class-methods-lab-v-000/routing-nested-resources-reading-v-000/config/routes.rb:5: syntax error, unexpected keyword_end, expecting end-of-input
+  end
+  ^~~):
+  config/routes.rb:3: syntax error, unexpected tSYMBEG, expecting '('
+  config/routes.rb:5: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.5ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:20:51 -0600
+Processing by AuthorsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template authors/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/michaeldilley/Desktop/Coding/Rails/user-addresses-and-teams/rails-layouts-and-templates-lab-v-000/simple-partials-reading-v-000/simple-partials-lab-v-000/partial-locals-reading-v-000/partial-locals-lab-v-000/refactoring-views-with-helpers-reading-v-000/refactoring-views-with-helpers-lab-v-000/model-class-methods-reading-v-000/model-class-methods-lab-v-000/routing-nested-resources-reading-v-000/app/views"
+):
+  actionview (4.2.11) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.11) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.11) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.11) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.11) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (95.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.8ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.2ms)
+
+
+Started GET "/authors/4/posts/4" for ::1 at 2019-01-25 14:29:34 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"4", "id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:35:09 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.9ms)
+
+
+Started GET "/authors" for ::1 at 2019-01-25 14:35:10 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (171.4ms)
+
+
+Started GET "/posts" for ::1 at 2019-01-25 14:35:16 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:35:19 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/authors/5/posts" for ::1 at 2019-01-25 14:35:27 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/5/posts" for ::1 at 2019-01-25 14:36:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 234ms (Views: 216.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:36:38 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:36:41 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:40:24 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 59ms (Views: 34.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:40:26 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/" for ::1 at 2019-01-25 14:40:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.9ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.5ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.4ms)
+
+
+Started GET "/authors" for ::1 at 2019-01-25 14:40:30 -0600
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (147.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/michaeldilley/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (175.8ms)
+
+
+Started GET "/posts" for ::1 at 2019-01-25 14:40:34 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2019-01-25 14:40:36 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/5/posts" for ::1 at 2019-01-25 14:40:39 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/6/posts" for ::1 at 2019-01-25 14:40:42 -0600
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"6"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 6]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.4ms)
