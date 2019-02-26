@@ -26,7 +26,7 @@ When we added the filter button to our blog, we could filter by a certain author
 
 That's the opposite of REST. That makes me *stressed*.
 
-![Not Sorry](http://i.giphy.com/J2LrJRhCjIKTC.gif)
+<!-- ![Not Sorry](http://i.giphy.com/J2LrJRhCjIKTC.gif) -->
 
 That URL tells us nothing, really, about the resources we're accessing. Not to mention that it's uglier than a Geocities site, and we might want to present our readers with a link they could understand and share with friends.
 
@@ -211,7 +211,7 @@ In `posts/index.html.erb`, we already show the author's name, so let's add a lin
   ...
 
   <h2><%= post.title %></h2>
-  
+
   <!-- change the name to a link -->
   <h3>by: <%= link_to post.author.name, author_posts_path(post.author) %></h3>
   <p><%= post.description %></p>
