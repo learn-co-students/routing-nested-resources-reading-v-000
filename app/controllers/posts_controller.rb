@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+  #TESTS PASS FROM README
   def index
     @posts = Post.all
   end
