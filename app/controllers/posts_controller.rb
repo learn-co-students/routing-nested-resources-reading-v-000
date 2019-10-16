@@ -1,7 +1,16 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    # @posts = Post.all
+
+    # https://learn.co/tracks/full-stack-web-development-v8/module-13-rails/section-10-routes-and-resources/routing-and-nested-resources
+    # added code
+    if params[:author_id]
+      @posts = Author.find(params[:author_id]).posts
+    else
+      @posts = Post.all
+    end
+
   end
 
   def show

@@ -2,7 +2,13 @@
 <% @posts.each do |post| %>
   <div>
     <h2><%= post.title %></h2>
-    <h3>by: <%= post.author.name %></h3>
+
+    <!-- deleted code-->
+    <!-- <h3>by: <#%= post.author.name %></h3> -->
+
+    <!-- https://learn.co/tracks/full-stack-web-development-v8/module-13-rails/section-10-routes-and-resources/routing-and-nested-resources -->
+    <!-- added code-->
+    <h3>by: <%= link_to post.author.name, author_posts_path(post.author) %></h3>
     <p><%= post.description %></p>
   </div>
 <% end %>
